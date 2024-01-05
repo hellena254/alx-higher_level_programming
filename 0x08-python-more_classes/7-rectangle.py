@@ -3,9 +3,14 @@
 
 
 class Rectangle:
-    """A class representing a rectangle"""
+    """A class representing a rectangle
+    Attributes:
+        number_of_instances : number of rectangle instances
+        print_symbol : symbol used in string representation
+    """
+
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """
@@ -71,7 +76,7 @@ class Rectangle:
 
         result = []
         for i in range(self.__height):
-            [result.append(str(Rectangle.print_symbol)) for j in range(self.__width)]
+            [result.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
                 result.append("\n")
         return ("".join(result))
