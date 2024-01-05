@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import sys
+"""module sys"""
+
 
 def is_safe(board, row, col, n):
     """
