@@ -1,5 +1,13 @@
+#!/usr/bin/python3
+"""A class rectangle"""
+
+
 class Rectangle:
-    """A class representing a rectangle"""
+    """A class representing a rectangle
+    Attribute:
+        number_of_instances - number of instances created
+        print_symbol - prints the symbol #
+    """
     number_of_instances = 0
     print_symbol = "#"
 
