@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""function that writes a string to a text file"""
+"""a function that reads a text file"""
 
 
 def write_file(filename="", text=""):
-    """returns the number of characters written"""
-    with open(filename, mode="", encoding="utf-8") as files:
-        return(files.write(text))
+    """function that reads a text file (UTF8) and prints it to stdout"""
+    with open(filename, "w", encoding="utf-8") as files:
+        print(files.write()
