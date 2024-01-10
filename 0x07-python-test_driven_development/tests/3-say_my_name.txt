@@ -1,0 +1,75 @@
+=======================================
+How to Use 3-say_my_name.py
+=======================================
+
+This module defines a function named ``say_my_name(first_name, last_name="")`` that prints a formatted message indicating a person's name.
+
+Usage
+=====
+
+The function constructs a message in the format "My name is <first name> <last name>" and prints it to the console.
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("John", "Doe")
+    My name is John Doe
+
+::
+
+    >>> say_my_name("Alice")
+    My name is Alice
+
+::
+
+    >>> say_my_name("Bob", "Smith")
+    My name is Bob Smith
+
+Invalid Inputs
+===============
+
+Ensure that both ``first_name`` and ``last_name`` are strings; otherwise, a TypeError is raised.
+
+::
+
+    >>> say_my_name(42, "Johnson")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string or last_name must be a string
+
+::
+
+    >>> say_my_name("Jane", 123)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string or last_name must be a string
+
+::
+
+    >>> say_my_name(None, "Doe")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string or last_name must be a string
+
+::
+
+    >>> say_my_name("Sam", None)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string or last_name must be a string
+
+Combining Examples
+==================
+
+::
+
+    >>> say_my_name("Mr.", "Johnson")
+    My name is Mr. Johnson
+
+::
+
+    >>> say_my_name("Jane", "")
+    My name is Jane
+
+::
+
+    >>> say_my_name("Dr.", "Williams")
+    My name is Dr. Williams
+
+The function allows flexibility in providing both first and last names or only the first name, generating a personalized message accordingly.
