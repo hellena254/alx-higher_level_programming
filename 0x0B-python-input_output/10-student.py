@@ -15,12 +15,6 @@ class Student:
 
     def to_json(self, attrs=None):
         """ retrieves a dictionary representation of a Student instance"""
-       if atttrs is None:
-             return (self.__dict__)
-
-        filtered_dict = {}
-        for attr in attrs:
-            if hasattr(self, attr):
-                filtered_dict[attr] = getattr(self, attr)
-
-        return filtered_dict
+        if (type(attrs) == list and all(type(attr) == str for attr in attrs)):
+            return {t: getattr(self, t) for t in attrs if hasattr(self, t)}
+        return (self.__dict__)
