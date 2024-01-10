@@ -2,7 +2,6 @@
 """add all arguments to a Python list"""
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
-
 import sys
 
 try:
@@ -10,6 +9,6 @@ try:
 except FileNotFoundError:
     data = []
 
-new_data = data + sys.argv[1:]
+data.extend(sys.argv[1:])
 # save the updated data
-save_to_json_file(new_data, "add_item.json")
+save_to_json_file(data, "add_item.json")
