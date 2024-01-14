@@ -22,8 +22,17 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """set the width of the rectangle"""
-        self.__width = value
+        """set the width
+        Raise:
+        TypeError- if value is not an integer
+        ValueError - if wisth is less than 0
+        """
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.__width = value
 
     @property
     def height(self):
@@ -32,8 +41,17 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        """set the height of the rectangle"""
-        self.__height = value
+        """set the height
+        Raise:
+        TypeError - if value is not an integer
+        ValueError - if value < 0
+        """
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        elif value <= 0:
+            raise ValueError("height must be > 0")
+        else:
+            self.__height = value
 
     @property
     def x(self):
@@ -42,8 +60,17 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """set the x co-ordinate"""
-        self.__x = value
+        """set x
+        Raise:
+        TypeError - if value is not an integer
+        ValueError - if value < 0
+        """
+        if not isinstance(value, int):
+            raise TypeError("x must be an integer")
+        elif value < 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = value
 
     @property
     def y(self):
@@ -52,5 +79,30 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """set the y value"""
-        self.__y = value
+        """set the y
+        Raise:
+        TypeError - if value is not an integer
+        ValueError - if value < 0
+        """
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
+        elif value < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = value
+
+    def area(self):
+        """calculate area"""
+        return self.__width * self.__height
+
+    def display(self):
+        """print the rectangle with character #"""
+        for _ in range(self.y):
+            print()
+        for _ in range(self.height):
+            print(" " * self.x + "#" *  self.width)
+
+    def __str__(self):
+        """string representation"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+
