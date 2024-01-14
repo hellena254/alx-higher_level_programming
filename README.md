@@ -10,8 +10,5 @@ I recommend the following reading materials to deepen your understanding of Pyth
 1. [Python Documentation](https://docs.python.org/):
 The official Python documentation is a comprehensive resource covering the language's syntax, standard library, and more.
 
-2. [Python](python.org):
-The official Python website provides a wealth of information, including tutorials, guides, and the latest news about the language.
-
 
 Feel free to reach out if you have any questions, suggestions, or collaboration ideas!
