@@ -27,11 +27,11 @@ if __name__ = "__main__":
     california = State(name="California")
 
     # Create the City "San Francisco" linked to "California"
-    san_francisco = City(name="San Francisco", state=california)
+    san = City(name="San Francisco")
 
     # add both objects to the session
+    california.cities.append(san)
     session.add(california)
-    session.add(san_fransisco)
 
     # commit the chanages
     session.commit()
