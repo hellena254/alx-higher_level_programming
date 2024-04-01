@@ -9,7 +9,6 @@ print: Error code: followed by the value of the HTTP status code
 import sys
 import requests
 
-
 if __name__ == "__main__":
     url = sys.argv[1]
 
