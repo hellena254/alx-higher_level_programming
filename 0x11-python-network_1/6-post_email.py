@@ -6,12 +6,12 @@ and finally displays the body of the response
 """
 
 import sys
-import urllib.request
+import request
+
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    email = sys.argv[2]
-    data_email = {'email': email}
+    value = {"email": sys.argv[2]}
 
-    body = requests.post(url, data=data_email)
+    body = requests.post(url, data=value)
     print(body.text)
