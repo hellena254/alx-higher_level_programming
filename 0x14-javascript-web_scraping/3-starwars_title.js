@@ -10,4 +10,5 @@ request(apiUrl, (error, response, body) => {
   } else {
     const film = JSON.parse(body);
     console.log(film.title);
+  }
 });
